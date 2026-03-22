@@ -1,0 +1,154 @@
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+
+background: linear-gradient(135deg, #1e3c72, #2a5298);
+
+color: white;
+}
+
+/* Main Card */
+.weather-card{
+width: 480px;   /* increased from 380px */
+padding: 30px;
+
+border-radius: 25px;
+
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(20px);
+
+border: 1px solid rgba(255,255,255,0.2);
+
+box-shadow:
+0 8px 32px rgba(0,0,0,0.3),
+inset 0 0 10px rgba(255,255,255,0.1);
+}
+
+/* Header */
+.app-title{
+font-weight: 600;
+margin: 0;
+letter-spacing: 1px;
+}
+
+.subtitle{
+font-size: 14px;
+opacity: 0.7;
+}
+
+/* Search */
+.search-box{
+display: flex;
+gap: 10px;
+}
+
+.search-box input{
+flex:1;
+
+background: rgba(255,255,255,0.2);
+border: 1px solid rgba(255,255,255,0.3);
+
+border-radius: 12px;
+
+padding: 10px;
+
+color: white;
+}
+
+.search-box input::placeholder{
+color: rgba(255,255,255,0.7);
+}
+
+.search-btn{
+background: rgba(255,255,255,0.3);
+border: 1px solid rgba(255,255,255,0.4);
+
+border-radius: 12px;
+
+color: white;
+
+transition: 0.3s;
+}
+
+.search-btn:hover{
+background: rgba(255,255,255,0.5);
+}
+
+/* Current Weather */
+.weather-icon{
+width: 90px;
+}
+
+.temp{
+font-size: 48px;
+margin: 10px 0;
+font-weight: 600;
+}
+
+.desc{
+opacity: 0.8;
+}
+
+.details{
+display: flex;
+justify-content: space-between;
+margin-top: 15px;
+
+font-size: 14px;
+
+opacity: 0.9;
+}
+
+/* Forecast */
+.forecast-section{
+margin-top: 25px;
+padding: 10px 5px;
+}
+
+/* Container */
+.forecast{
+display: flex;
+justify-content: space-between; /* now safe because container is bigger */
+gap: 10px;
+flex-wrap: nowrap;              /* â— prevents second line */
+}
+
+/* Cards */
+.forecast-card{
+flex: 1;                        /* all cards equal width */
+min-width: 70px;
+
+padding: 12px 8px;
+
+border-radius: 15px;
+
+background: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.2);
+
+text-align: center;
+
+transition: all 0.3s ease;
+}
+/* Fix text spacing */
+.forecast-card p{
+margin: 0;
+font-size: 13px;
+}
+
+.forecast-card span{
+display: block;
+margin-top: 5px;
+font-weight: 500;
+}
+
+/* Icon */
+.forecast-card img{
+width: 36px;
+margin: 5px 0;
+}
+
+/* Hover */
+.forecast-card:hover{
+transform: translateY(-5px) scale(1.05);
+background: rgba(255,255,255,0.2);
+}
